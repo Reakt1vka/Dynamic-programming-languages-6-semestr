@@ -5,7 +5,7 @@ from telebot import types
 
 # Add your bot token in "token = "
 def run_bot():
-    token = ""
+    token = "6370437774:AAHstKTBH6qoNqtsTvesDbdU48QVx_tu1a8"
     bot = telebot.TeleBot(token)
     print("[INFO] Bot started!")
     # Send hello message
