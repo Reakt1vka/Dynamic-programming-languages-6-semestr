@@ -1,0 +1,36 @@
+<!-- HTML Document -->
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body>
+    <div class="content">
+        <h2>Калькулятор сложного процента: </h2>
+        <form method="post" action="/add_number">
+            <label>Размер вклада (руб.):</label><br>
+             <input name="deposit_amount" min="0"><br>
+            <label>Срок вклада (г.):</label><br>
+             <input name="deposit_term" min="0"><br>
+            <label>Процентная ставка (%):</label><br>
+             <input name="interest_rate" min="0"><br>
+            <button type="submit">Выполнить</button>
+        </form>
+        <h3>Результат:</h3>
+        <!-- Output loop -->
+        <table>
+        {% for i in range(0, len) %}
+        <tr>
+            <td>Год: {{ i+1 }}</td>
+            <td>Размер вклада: {{ temporary_storage[i] }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
