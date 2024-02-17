@@ -41,7 +41,7 @@ def run_bot():
     def update(message):
         # Checking for admin
         # Into a variable "admin_id" add your id
-        admin_id = 
+        admin_id = 972966644
         if message.from_user.id == admin_id:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
             yes_button = types.KeyboardButton('Да ✅')
